@@ -222,3 +222,62 @@ p.lead {
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   }
 }
+/* ===== About Card Styles (white card, black text) ===== */
+.about-card{
+  background:#fff;
+  color:#000;
+  font-family:'Poppins', sans-serif;
+  border-radius:14px;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+  padding:22px 20px;
+  margin:16px 0;
+  width:100%;
+  box-sizing:border-box;
+}
+
+.about-title{
+  margin:0 0 10px 0;
+  font-size:1.6rem;
+  font-weight:700;
+  line-height:1.2;
+}
+
+.about-intro{
+  margin:0 0 16px 0;
+  font-size:1rem;
+  line-height:1.65;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+
+.about-block h3{
+  margin:0 0 8px 0;
+  font-size:1.05rem;
+  font-weight:700;
+}
+
+.about-block ul{
+  margin:0;
+  padding-left:18px;
+}
+
+.about-block li{
+  margin:6px 0;
+  line-height:1.5;
+}
+
+/* Mobile: full width, single column */
+@media (max-width: 991px){
+  .about-card{
+    margin:10px 0;
+    padding:16px 14px;
+  }
+  .about-grid{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+}
