@@ -9,6 +9,17 @@
   object-fit: cover;
 }
 
+/* Magical Black Bubbles Canvas */
+#bubble-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 10000;
+}
+
 /* General Typography */
 body {
   font-family: 'Poppins', sans-serif;
@@ -23,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p.lead {
-  font-family: 'Bungee', cursive;
+  font-family: 'Poppins', sans-serif;
   font-size: 1.2rem;
   color: #000000;
 }
@@ -172,7 +183,7 @@ p.lead {
     display: block;
     font-family: 'Bungee', 'Orbitron', cursive, sans-serif;
     font-size: 1.2rem;
-    color: #0077b5;
+    color: #000000;
     background: linear-gradient(90deg, #e0f7fa 0%, #fff 100%);
     text-align: center;
     padding: 12px 8px;
@@ -185,6 +196,16 @@ p.lead {
 
 @media (min-width: 992px) {
   .mobile-intro {
-    display: none;
+    display: block;
+  font-family: 'Bungee', cursive, 'Orbitron', sans-serif;
+  font-size: 1.3rem;
+  color: #111 !important;
+    background: linear-gradient(90deg, #e0f7fa 0%, #fff 100%);
+    text-align: left;
+    padding: 18px 8px 8px 18px;
+    margin-top: 18px;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   }
-}
