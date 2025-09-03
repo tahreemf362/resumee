@@ -1,0 +1,190 @@
+/* Background Video */
+#bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1; /* Always behind everything */
+  object-fit: cover;
+}
+
+/* General Typography */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+p.lead {
+  font-family: 'Bungee', cursive;
+  font-size: 1.2rem;
+  color: #000000;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #fff;
+  width: 250px;
+  padding: 20px;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  overflow-y: auto;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+/* Hamburger button styles */
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 1.2rem;
+  left: 1.2rem;
+  z-index: 2000;
+  background: rgba(255,255,255,0.95);
+  border: 2px solid #0077b5;
+  border-radius: 8px;
+  font-size: 2.2rem;
+  color: #0077b5;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.3);
+  z-index: 1500;
+  transition: opacity 0.3s;
+}
+#overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Cards */
+.box-card, .card-compact, .accent-card {
+  background: #fff;
+  color: #000;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+.box-card h3, .card-compact h5 {
+  font-weight: 700;
+  color: #000;
+}
+
+/* Buttons */
+.btn.fancy-btn {
+  background: #0077B5;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 8px 16px;
+  transition: 0.3s;
+}
+.btn.fancy-btn:hover {
+  background: #005582;
+  color: #fff;
+}
+.btn-ghost {
+  background: transparent;
+  border: 2px solid #0077B5;
+  color: #0077B5;
+  font-weight: 600;
+}
+.btn-ghost:hover {
+  background: #0077B5;
+  color: #fff;
+}
+
+/* Content Layout */
+.content {
+  margin-left: 270px;
+  padding: 20px;
+}
+
+.section-heading {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* Responsive Mobile Fixes */
+@media (max-width: 991px) {
+  /* Sidebar slides in/out */
+  .sidebar {
+    position: fixed;
+    width: 70vw;
+    max-width: 320px;
+    min-height: 100vh;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+    z-index: 1800;
+  }
+  .sidebar.active {
+    transform: translateX(0);
+  }
+  .hamburger {
+    display: block;
+  }
+  #overlay {
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+  }
+  #overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Fix content and cards */
+  .content {
+    margin-left: 0 !important;  /* Remove left push */
+    padding: 10px;
+  }
+
+  .box-card, .card-compact, .accent-card {
+    width: 100%;
+    max-width: 100%;
+    margin: 10px 0;
+    padding: 14px;
+    box-sizing: border-box;
+  }
+
+  /* Mobile intro banner */
+  .mobile-intro {
+    display: block;
+    font-family: 'Bungee', 'Orbitron', cursive, sans-serif;
+    font-size: 1.2rem;
+    color: #0077b5;
+    background: linear-gradient(90deg, #e0f7fa 0%, #fff 100%);
+    text-align: center;
+    padding: 12px 8px;
+    margin: 0;
+    letter-spacing: 1px;
+    border-radius: 0 0 14px 14px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+}
+
+@media (min-width: 992px) {
+  .mobile-intro {
+    display: none;
+  }
+}
